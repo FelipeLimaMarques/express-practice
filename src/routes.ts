@@ -7,4 +7,8 @@ router.post('/users', (request, response) => {
     return createUserController.handle(request, response);
 });
 
-export { Router };
+router.get('/', (_, response) => {
+    return response.status(200).send('Good');
+});
+
+export { router };
